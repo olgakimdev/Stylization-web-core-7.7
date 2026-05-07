@@ -60,8 +60,6 @@ body {
 .modal {
   position: fixed;
   z-index: 1000; 
-  width: 400px;
-  height: 200px;
   top: 0;
   left: 0;
   right: 0;
@@ -74,23 +72,38 @@ body {
 
 .modal-backdrop {
   background-color: rgba(0,0,0,0.5);
-  position: absolute;
+  position: fixed;
   z-index: 1;
 }
 
 .modal-content {
   position: relative;
   z-index: 2;
+  width: 400px;
+  height: 200px;
   text-align: center;
   background: #dfe1e2;
   padding: 20px;
   border-radius: 10px; 
+  box-shadow: 0px 4px 10px; 
+
 }
 
 .modal-content h2 {
     font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    color: rgb(12, 39, 220);
+    font-family: Helvetica, sans-serif;
 }
 
 .modal-content p {
     font-size: 14px;
+    color:#235ada;
+    font-family: Helvetica, serif;
+}
+
+@media (max-width: 480px){
+  .modal-content {
+    height: auto;
+  }
 }
